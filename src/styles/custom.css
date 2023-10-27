@@ -1,0 +1,82 @@
+.w-box {
+  @apply w-[76px] 
+         h-[76px]
+         rounded-[5px]
+         text-3xl
+         text-white
+         mx-2 
+         border-black 
+         flex 
+         justify-center 
+         items-center;
+}
+
+.w-header {
+  @apply container 
+         flex
+         mx-auto 
+         w-fit 
+         mt-12
+         mb-20
+         px-4 
+         py-5 
+         bg-wgray-100 
+         rounded-[15px];
+}
+
+.w-keyboard {
+  @apply container 
+         mx-auto 
+         w-fit 
+         mt-12
+         px-4 
+         py-5 
+         bg-wgray-100 
+         rounded-[15px];
+}
+
+.w-box-keyboard {
+  @apply w-[45px] 
+         h-[51px] 
+         text-md 
+         text-wgray-600 
+         m-1 
+         rounded-[5px] 
+         bg-wgray-200 
+         active:bg-wgray-400 
+         active:text-white
+         flex 
+         justify-center 
+         items-center;
+}
+
+.w-modal {
+  @apply absolute 
+         top-1/2 
+         left-1/2 
+         translate-x-[-50%] 
+         translate-y-[-50%] 
+         w-[546px]
+         bg-wgray-50 
+         rounded-[10px] 
+         border
+         border-black;
+}
+
+.w-stat {
+  @apply flex 
+         flex-col 
+         my-10
+         items-center;
+}
+
+.w-btn {
+  @apply rounded-[5px] 
+         bg-wgreen-100 
+         text-white 
+         w-64
+         h-11 
+         mt-4
+         mb-5
+         text-2xl;
+}
