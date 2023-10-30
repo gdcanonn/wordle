@@ -26,29 +26,29 @@ const ModalStats: React.FC = () => {
         'w-modal',
         { 'bg-wdark-200 text-white border-wgray-400': !lightTheme }
       )}>
-        <span className="text-3xl flex justify-center mt-10">Estadísticas</span>
+        <span className="text-3xl flex justify-center mt-10 font-bold">Estadísticas</span>
 
         <div className="flex justify-around">
           <div className="w-stat">
-            <span className="text-3xl">{matches}</span>
-            <span className="text-xl font-thin">Jugadas</span>
+            <span className="text-3xl font-bold">{matches}</span>
+            <span className="text-xl">Jugadas</span>
           </div>
           <div className="w-stat">
-            <span className="text-3xl">{victories}</span>
+            <span className="text-3xl font-bold">{victories}</span>
             <span className="text-xl">Victorias</span>
           </div>
         </div>
 
         {finished && !successed && <div className="flex justify-center">
           <div className="flex flex-col items-center">
-            <span className="text-md font-thin my-4">La palabra era: {prevHiddenWordRef.current}</span>
+            <span className="text-md my-4">La palabra era: <span className="font-bold">{prevHiddenWordRef.current}</span></span>
           </div>
         </div>}
 
         <div className="flex justify-center">
           <div className="flex flex-col items-center">
-            <span className="text-md font-thin my-4">SIGUIENTE PALABRA</span>
-            <span className="text-xl mb-4">{`${getTimeTwoDigits(time.m || 0)}:${getTimeTwoDigits(time.s || 0)}`}</span>
+            <span className="text-md my-4">SIGUIENTE PALABRA</span>
+            <span className="text-xl mb-4 font-bold">{`${getTimeTwoDigits(time.m || 0)}:${getTimeTwoDigits(time.s || 0)}`}</span>
           </div>
         </div>
 

@@ -7,8 +7,17 @@
          mx-2 
          border-black 
          flex 
+         font-bold
          justify-center 
          items-center;
+}
+
+.w-box-inst {
+  @apply flex 
+         justify-center 
+         mx-4 
+         my-4
+         font-bold;
 }
 
 .w-header {
@@ -46,6 +55,7 @@
          active:bg-wgray-400 
          active:text-white
          flex 
+         font-md
          justify-center 
          items-center;
 }
@@ -78,5 +88,6 @@
          h-11 
          mt-4
          mb-5
+         font-bold
          text-2xl;
 }

@@ -31,7 +31,7 @@ const Header: React.FC = () => {
           {lightTheme ? <img src={question} alt='delete' /> : <img src={questionDark} alt='help' />}
         </div>
 
-        <span className='text-4xl ml-36 mr-32'>WORDLE</span>
+        <span className='text-4xl ml-36 mr-32 font-md'>WORDLE</span>
 
         <div className='flex mx-1 cursor-pointer' onClick={() => setShowStats(true)}>
           {lightTheme ? <img src={chart} alt='delete' /> : <img src={chartDark} alt='chart' />}

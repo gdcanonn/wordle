@@ -20,15 +20,15 @@ const ModalInstructions: React.FC = () => {
         { ' bg-wgray-80': lightTheme },
         { 'bg-wdark-200 text-white border-wgray-400': !lightTheme }
       )}>
-        <span className="text-3xl flex justify-center my-10">Cómo jugar</span>
+        <span className="text-3xl flex justify-center my-10 font-bold">Cómo jugar</span>
 
         <div className="mx-10 text-md">
           <p className="mb-4">Adivina la palabra oculta en cinco intentos</p>
           <p className="mb-4">Cada intento debe ser una palabra válida de 5 letras.</p>
           <p className="mb-4">Después de cada intento el color de las letras cambia para mostrar qué tan cerca estás de acertar la palabra.</p>
 
-          <p className="mb-4">Ejemplos</p>
-          <div className="flex justify-center mx-4 my-4">
+          <p className="mb-4 font-bold">Ejemplos</p>
+          <div className="w-box-inst">
             <Box box={{ key: 'G', status: BOX_STATUS.existMatched }} black={lightTheme} />
             <Box box={{ key: 'A', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
             <Box box={{ key: 'T', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
@@ -36,8 +36,8 @@ const ModalInstructions: React.FC = () => {
             <Box box={{ key: 'S', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
           </div>
 
-          <p className="mb-4">La letra G está en la palabra y en la posición correcta.</p>
-          <div className="flex justify-center mx-4 my-4">
+          <p className="mb-4">La letra <span className="font-bold">G</span> está en la palabra y en la posición correcta.</p>
+          <div className="w-box-inst">
             <Box box={{ key: 'V', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
             <Box box={{ key: 'O', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
             <Box box={{ key: 'C', status: BOX_STATUS.existNotMached }} black={lightTheme} />
@@ -45,8 +45,8 @@ const ModalInstructions: React.FC = () => {
             <Box box={{ key: 'L', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
           </div>
 
-          <p className="mb-4">La letra C está en la palabra pero en la posición incorrecta.</p>
-          <div className="flex justify-center mx-4 my-4">
+          <p className="mb-4">La letra <span className="font-bold">C</span> está en la palabra pero en la posición incorrecta.</p>
+          <div className="w-box-inst">
             <Box box={{ key: 'C', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
             <Box box={{ key: 'A', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
             <Box box={{ key: 'N', status: BOX_STATUS.empty }} border black={lightTheme} bgWhite={lightTheme} />
@@ -54,7 +54,7 @@ const ModalInstructions: React.FC = () => {
             <Box box={{ key: 'O', status: BOX_STATUS.notExits }} black={lightTheme} />
           </div>
 
-          <p className="mb-7">La letra O no está en la palabra.</p>
+          <p className="mb-7">La letra <span className="font-bold">O</span> no está en la palabra.</p>
           <p className="mb-10">Puede haber letras repetidas. Las pistas son independientes para cada letra.</p>
         </div>
 

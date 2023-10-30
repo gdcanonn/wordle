@@ -41,6 +41,14 @@ module.exports = {
           200: '#CEB02C',
         }
       },
+      fontFamily: {
+        'bl': ['RobotoBlack'],
+        'bold': ['RobotoBold'],
+        'md': ['RobotoMedium'],
+        'rg': ['RobotoRegular'],
+        'lt': ['RobotoLight'],
+        'thin': ['RobotoThin'],
+      },
     },
   },
   plugins: [],

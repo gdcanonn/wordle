@@ -3,29 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: "RobotoBold";
-  src: local("RobotoBold"),
-   url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "RobotoMedium";
-  src: local("RobotoMedium"),
-   url("./fonts/Roboto/Roboto-Medium.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "RobotoThin";
-  src: local("RobotoThin"),
-   url("./fonts/Roboto/Roboto-Thin.ttf") format("truetype");
-  font-weight: 100;
-}
-
-body,
-html {
-  font-family: RobotoMedium, RobotoThin;
-}

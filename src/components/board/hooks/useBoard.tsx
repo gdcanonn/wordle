@@ -1,10 +1,10 @@
-import { useEffect } from "react"
+import { useCallback, useEffect } from "react"
 import { getWord } from "../../../api/words"
 import { useWordleContext, useWordleSetState } from "../../../contexts/wordle.context"
 import { initBoxes } from "../../../utils/constants"
 
 const useBoard = (findWord: boolean) => {
-  const [{ finished, matches, blockedWords }] = useWordleContext()
+  const [{ finished, matches, blockedWords, showStats }] = useWordleContext()
   const {
     setHiddenWord, setShowStats, setBoxes, setFinished,
     setSuccessed, setMatches, setBlockedWords
@@ -35,14 +35,16 @@ const useBoard = (findWord: boolean) => {
     setShowStats(false)
   }
 
-  const reinitFromCountDown = () => {
+  const reinitFromCountDown = useCallback(() => {
+    setShowStats(!showStats)
     setBoxes(initBoxes())
     setSuccessed(false)
     setMatches(matches + 1)
-    setShowStats(true)
     setFinished(true)
     getRamdomWord()
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
 
   useEffect(() => {
     findWord && getRamdomWord()
